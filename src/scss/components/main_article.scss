@@ -1,0 +1,27 @@
+/* main_article */
+
+.main_article{
+  flex:1 1 auto;
+  padding:0px 80px 40px 80px;
+  position:relative;
+  &__lottery{
+      height:100%;
+      background:transparent url('./../assets/img/lottery_bg.png') no-repeat 50% 50%;
+      background-size:100% 100%;
+      margin:auto;
+  }
+  &__cta_wrapper{
+      position:absolute;
+      bottom:45px;
+      width:calc(100% - 150px);
+  }
+  &__winners{
+    @extend %font-inter-bold;
+    margin:0;
+    padding:0;
+    text-align:center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);;
+    font-size:40px;
+    line-height:44px;
+  }
+}

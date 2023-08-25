@@ -1,0 +1,21 @@
+// Boot Imports
+@import 'normalize';
+@import 'variables';
+@import 'palette';
+
+// Style Imports
+@import 'global';
+@import 'tools';
+@import 'typography';
+//@import 'atoms';
+
+// Style components
+@import 'components/main_aside';
+@import 'components/main_article';
+@import 'components/card_list';
+@import 'components/card';
+@import 'components/button_cta';
+
+#lottery-ball{
+  padding: 10% 5.5%;
+}

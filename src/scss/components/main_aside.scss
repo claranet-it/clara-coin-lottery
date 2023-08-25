@@ -1,0 +1,46 @@
+/* main_aside */
+
+.main_aside{
+  width:$main_side-width;
+  flex:0 0 auto;
+  &__header{
+    padding:$gutter_v $gutter_h;
+    display:flex;
+    flex-direction: column;
+    &__row{
+      display:flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    &__img{
+      display:block;
+      margin:0 15px 0 0;
+      float:left;
+      width:$main_side-width * 0.5;
+    }
+    &__text{
+      margin:5px 0 0 0;
+      padding:0;
+    }
+    &__title{
+      @extend %font-inter-bold;
+      font-size:48px;
+      background:transparent url('./../assets/img/coin.png') no-repeat 0 50%;
+      margin:-25px 0 0 -40px;
+      padding:60px 0 60px 117px;
+    }
+    &__subtitle{
+      margin:-35px 0 0 78px;
+      padding:0;
+      font-size:16px;
+    }
+  }
+  &__section{
+    padding:0 $gutter_h;
+    &__title{
+      @extend %font-inter-bold;
+      font-size:20px;
+      text-transform:uppercase;
+    }
+  }
+}

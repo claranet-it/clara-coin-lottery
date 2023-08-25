@@ -1,0 +1,52 @@
+// Tools
+
+// Clearing
+.clear_fix {
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    overflow: hidden;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Alignment
+.align_right {
+  text-align: right;
+}
+
+.align_left {
+  text-align: left;
+}
+
+.align_center {
+  text-align: center;
+}
+
+.pull-left {
+  float: left !important;
+}
+.pull-right {
+  float: right !important;
+}
+
+// Positioning
+.position_relative {
+  position: relative;
+}
+
+.float_left {
+  float: left;
+}
+
+.float_right {
+  float: right;
+}
+
+// wrap
+.white-space-pre-wrap {
+  white-space: pre-wrap;
+}

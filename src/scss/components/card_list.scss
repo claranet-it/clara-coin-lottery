@@ -1,0 +1,69 @@
+/* card_list */
+
+.card_list{
+  margin:0;
+  padding:0;
+  list-style:none;
+  &__item{
+      border:1px solid $tone1;
+      background: $tone2; /* Old browsers */
+      background: -moz-linear-gradient(-45deg,  $tone2 0%, $tone3 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(-45deg,  $tone2 0%,$tone3 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(135deg,  $tone2 0%,$tone3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      border-radius:12px;
+      box-shadow: 0px 0px 20px #DFB444;
+      display:flex;
+      align-items:center;
+      margin:0 0 24px 0;
+      padding:10px 20px;
+      &__ranking{
+        flex:0 0 auto;
+        @extend %font-inter-bold;
+        font-size:20px; 
+      }
+      &__figure{
+        flex:0 0 auto;
+        margin:0 10px 0 20px;
+        padding:0;
+        img{
+            display:block;
+            border-radius:50%;
+            border:3px solid $tone5;
+            &.empty{
+                border:3px solid $shadow1;
+                filter:blur(2px);
+            }
+        }
+        &__receiver{
+            width:70px;
+            height:70px;
+        }
+        &__donor{
+            width:40px;
+            height:40px;
+            margin:-15px auto 0 auto;
+            position:relative;
+        }
+      }
+      &__surfers{
+        flex:1 1 auto;
+        &__role{
+            margin:0;
+            padding:0;
+            font-size:10px;
+            text-transform:uppercase;
+            line-height:20px;
+        }
+        &__name{
+            @extend %font-inter-bold;
+            margin:0 0 10px 0;
+            padding:0;
+            font-size:20px;
+            line-height:20px;
+            &:last-child{
+                margin-bottom:5px;
+            }
+        }
+      }
+  }
+}

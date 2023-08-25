@@ -1,0 +1,27 @@
+// Typography
+
+// font-face  
+@font-face {
+  font-family: 'Inter-Bold';
+  src: url('../assets/font/Inter-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../assets/font/Inter-Bold.ttf') format('truetype'),
+    url('../assets/font/Inter-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Inter-Regular';
+  src: url('../assets/font/Inter-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../assets/font/Inter-Regular.ttf') format('truetype'),
+    url('../assets/font/Inter-Regular.woff') format('woff');
+}
+
+$font-inter-bold: 'Inter-Bold', Helvetica, Arial, sans-serif;
+$font-inter-regular: 'Inter-Regular', Helvetica, Arial, sans-serif;
+
+%font-inter-bold {
+  font-family: $font-inter-bold;
+  font-weight: normal;
+}
+%font-inter-regular {
+  font-family: $font-inter-regular;
+  font-weight: normal;
+}

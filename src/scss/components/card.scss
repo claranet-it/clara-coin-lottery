@@ -1,0 +1,117 @@
+/* card_list */
+
+.card {
+  // margin:0 auto 0 auto;
+  padding: 0;
+  width: 312px;
+  height: 445px;
+  border-radius: 16px;
+  background: $tone8 url('./../assets/img/pattern_card.png') repeat-x 100% 0;
+  box-shadow: 0px 0px 20px #dfb444;
+  // position:relative;
+  top: calc(50vh - 222px); //half height .card
+  &__sphere {
+    width: 9vh;
+    height: 11.5vh;
+    padding: 1px 0;
+    background: $tone8 url('./../assets/img/pattern_card.png') repeat-x 100% 0;
+    background-size: cover;
+    .card_list__item__figure {
+      margin: 0px 5px 3px 3px;
+    }
+    .card_list__item__figure__donor {
+      margin: -20px auto 0 10px;
+      width: 40px;
+      height: 40px;
+      position: relative;
+    }
+    .card_list__item__figure__receiver {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  &__title {
+    @extend %font-inter-bold;
+    margin: 0 0 15px 0;
+    padding: 30px 0 0 0;
+    color: $text2;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    strong {
+      font-weight: normal;
+      display: block;
+      font-size: 48px;
+      line-height: 40px;
+    }
+  }
+  &__figure {
+    margin: 0 auto;
+    padding: 0;
+    width: $card_image-width;
+    img {
+      display: block;
+      border-radius: 50%;
+      border-color: $tone9;
+      border-style: solid;
+    }
+    &__receiver {
+      width: $card_image-width;
+      height: $card_image-width;
+      border-width: 8px;
+    }
+    &__donor {
+      width: 125px;
+      height: 125px;
+      margin: -45px auto 0 auto;
+      position: relative;
+      border-width: 6px;
+    }
+  }
+  &--winner {
+    &:before {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 80px;
+      background: transparent url('./../assets/img/crown.svg') no-repeat 0 0;
+      position: absolute;
+      top: -58px;
+      left: calc((#{$card_image-width} / 2) + 5px);
+    }
+  }
+  @keyframes tada {
+    0% {
+      transform: scale3d(1, 1, 1);
+    }
+
+    10%,
+    20% {
+      transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    }
+
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+
+    40%,
+    60%,
+    80% {
+      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+
+    100% {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  &__tada {
+    animation-name: tada;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-iteration-count: 3;
+  }
+}

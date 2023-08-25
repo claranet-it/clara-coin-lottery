@@ -1,0 +1,106 @@
+// Variables
+
+// Layout variables
+$main_side-width:480px;
+$gutter_v:32px;
+$gutter_h:44px;
+$card_image-width:220px;
+
+// Mixin
+@mixin transition($valuetransition) {
+  transition: $valuetransition;
+  -webkit-transition: $valuetransition;
+  -o-transition: $valuetransition;
+  -moz-transition: $valuetransition;
+}
+
+@mixin transition-delay($valuetransition-delay) {
+  transition-delay: $valuetransition-delay;
+  -webkit-transition-delay: $valuetransition-delay;
+}
+
+@mixin transition-timing($valuetransition-timing) {
+  transition-timing-function: $valuetransition-timing;
+  -webkit-transition-timing-function: $valuetransition-timing;
+  -moz-transition-timing-function: $valuetransition-timing;
+  -o-transition-timing-function: $valuetransition-timing;
+}
+
+@mixin transition-duration($valuetransition-duration) {
+  transition-duration: $valuetransition-duration;
+  -webkit-transition-duration: $valuetransition-duration;
+  -moz-transition-duration: $valuetransition-duration;
+  -o-transition-duration: $valuetransition-duration;
+}
+
+@mixin transform-scale($valuetransform) {
+  -ms-transform: scale($valuetransform);
+  -webkit-transform: scale($valuetransform);
+  -moz-transform: scale($valuetransform);
+  -o-transform: scale($valuetransform);
+  transform: scale($valuetransform);
+}
+
+@mixin hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// Mediaquery & Browserquery
+$s-smartphone-width: 430px;
+$m-smartphone-width: 600px;
+$m-tablet-width: 992px;
+$s-desktop-width: 1024px;
+$m-desktop-width: 1280px;
+$l-desktop-width: 1441px;
+
+@mixin s-smartphone {
+  @media (min-width: 0) and (max-width: #{$s-smartphone-width}) {
+    @content;
+  }
+}
+
+@mixin smartphone {
+  @media (min-width: 0) and (max-width: #{$m-smartphone-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 0) and (max-width: #{$m-tablet-width}) {
+    @content;
+  }
+}
+
+@mixin s-desktop {
+  @media (min-width: 0) and (max-width: #{$s-desktop-width}) {
+    @content;
+  }
+}
+
+@mixin m-desktop {
+  @media (min-width: 0) and (max-width: #{$m-desktop-width}) {
+    @content;
+  }
+}
+
+@mixin l-desktop {
+  @media (min-width: #{$l-desktop-width}) {
+    @content;
+  }
+}
+
+@mixin no-desktop {
+  @media (min-width: 993px) {
+    @content;
+  }
+}
+
+@mixin ie11-10 {
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    @content;
+  }
+}

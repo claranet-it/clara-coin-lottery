@@ -1,0 +1,103 @@
+// Atoms
+
+// Titles
+.title_display_xxl {
+  @extend %font-spacegrotesk-bold;
+  font-size: 48px;
+  line-height: 62px;
+  color: $text;
+}
+
+// Text
+.text_m {
+  @extend %font-inter-regular;
+  font-size: 20px;
+  line-height: 32px;
+  color: $grey1;
+}
+
+// Buttons
+.button_primary {
+  @extend %font-inter-bold;
+  background-color: $primary;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  line-height: 26px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border-radius: 4px;
+  color: $white;
+  cursor: pointer;
+  padding: 11px $spacerxs2;
+  &:hover {
+    background-color: $primary_hover;
+  }
+  &--type2 {
+    background-color: $white;
+    color: $primary;
+    &:hover {
+      background-color: $white;
+      opacity: 0.4;
+    }
+  }
+  &--type3 {
+    background-color: $accent;
+    &:hover {
+      background-color: $accent_hover;
+    }
+  }
+  &--type4 {
+    @extend .button_primary--type2;
+    border: 1px solid $primary;
+  }
+  &--small {
+    font-size: 14px;
+    line-height: 24px;
+    padding: $spacerxxs $spacerxxs2;
+  }
+  &.disable,
+  &[disabled] {
+    color: $grey2;
+    background-color: $grey6;
+    cursor: not-allowed;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin button_ico($align: left, $text: yes, $ico: dropdown) {
+  background-repeat: no-repeat;
+  text-align: left;
+  @if $align==right {
+    background-position: 86% 50%;
+    padding-right: 48px;
+    padding-left: $spacerxs2;
+  } @else {
+    background-position: 18px 50%;
+    padding-left: 50px;
+  }
+  @if $text==no {
+    padding: 20px 20px;
+    background-position: 50% 50%;
+    vertical-align: middle;
+    span {
+      display: none;
+    }
+  } @else {
+    span {
+      display: inline;
+    }
+  }
+  @if $ico==placeholder {
+    background-image: url('../public/assets/img/placeholder_button_ico.svg');
+  }
+}
+
+.button_ico {
+  @include button_ico;
+  &--placeholder {
+    @include button_ico(left, yes, placeholder);
+  }
+}
